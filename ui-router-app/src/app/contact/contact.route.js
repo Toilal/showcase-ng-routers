@@ -13,6 +13,22 @@
         templateUrl: 'app/contact/contact.html',
         controller: 'ContactController',
         controllerAs: 'contact'
+      })
+
+      .state('main.contact.message', {
+        url: '/message',
+        views: {
+          captcha: {
+            templateUrl: 'app/contact/captcha/captcha.html',
+            controller: 'CaptchaController',
+            controllerAs: 'captcha'
+          },
+          '': {
+            templateUrl: 'app/contact/message/message.html',
+            controller: 'MessageController',
+            controllerAs: 'message'
+          }
+        }
       });
   }
 
