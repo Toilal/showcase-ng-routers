@@ -9,6 +9,7 @@
   function routeConfig($stateProvider) {
     $stateProvider
       .state('contact', {
+        parent: 'main',
         url: '/contact',
         templateUrl: 'app/contact/contact.html',
         controller: 'ContactController',

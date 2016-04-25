@@ -8,10 +8,12 @@
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-      .state('main', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+      .state('home', {
+        parent: 'main',
+        url: '/',
+        templateUrl: 'app/home/home.html',
+        controller: 'HomeController',
+        controllerAs: 'home'
       });
   }
 
