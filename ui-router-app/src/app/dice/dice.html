@@ -1,0 +1,23 @@
+<div>
+  <div class="jumbotron text-center">
+    <h1>{{dice.diceCount}} Dices</h1>
+    <button class="btn btn-lg btn-primary" ng-click="dice.throwAllDices()">Throw</button>
+    <br/>
+    <div><strong>Max possible value is {{dice.diceMax}}</strong></div>
+    <br/>
+    <h2>Total: {{dice.total}}</h2>
+  </div>
+
+  <table class="table dice-table">
+    <tr>
+      <th class="index">Index</th>
+      <th class="dice-value">Value</th>
+    </tr>
+    <tr ng-repeat="diceValue in dice.dices track by $index"
+        ng-class="{'not-thrown': !dice.isThrown(diceValue), 'thrown': dice.isThrown(diceValue)}">
+      <td class="index">#{{$index+1}}</td>
+      <td class="dice-value">{{diceValue}}</td>
+    </tr>
+  </table>
+
+</div>
