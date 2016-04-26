@@ -6,16 +6,13 @@
     .controller('DiceController', DiceController);
 
   /** @ngInject */
-  function DiceController(_, $timeout, $q, $stateParams) {
+  function DiceController(_, $timeout, $q, $stateParams, dices) {
     var vm = this;
 
     vm.diceCount = $stateParams.diceCount;
     vm.diceMax = $stateParams.diceMax;
-
-    vm.dices = [];
-    for (var i = 0; i < vm.diceCount; i++) {
-      vm.dices.push(NaN);
-    }
+    vm.dices = dices;
+    
     vm.total = 0;
 
     function throwDice(i) {
