@@ -11,8 +11,9 @@
 
     vm.diceCount = $stateParams.diceCount;
     vm.diceMax = $stateParams.diceMax;
+    vm.message = $stateParams.message;
     vm.dices = dices;
-    
+
     vm.total = 0;
 
     function throwDice(i) {

@@ -4,6 +4,7 @@
     <button class="btn btn-lg btn-primary" ng-click="dice.throwAllDices()">Throw</button>
     <br/>
     <div><strong>Max possible value is {{dice.diceMax}}</strong></div>
+    <h2 class="bg-info" ng-if="dice.message">{{dice.message}}</h2>
     <br/>
     <h2>Total: {{dice.total}}</h2>
   </div>
